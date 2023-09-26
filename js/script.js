@@ -1,4 +1,5 @@
 import ehUmCPF from "./valida-cpf.js";
+import eMaiorDeIdade from "./valida-idade.js";
 
 const camposDoFormulario = document.querySelectorAll('[required]');
 
@@ -11,4 +12,8 @@ function verificaCampo(campo){
     if (campo.name == "cpf" && campo.value.length >= 11) {
         ehUmCPF(campo);
     }
+    if (campo.name == "aniversario" && campo.value != "") {
+        eMaiorDeIdade(campo)
+    }
+        
 }
